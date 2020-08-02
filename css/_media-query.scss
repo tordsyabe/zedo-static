@@ -1,0 +1,57 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    margin: 2em 0;
+
+    nav {
+      display: inline-block;
+    }
+  }
+
+  .content__main {
+    display: flex;
+    flex-wrap: wrap;
+
+    main {
+      width: 100%;
+      flex: 1 1 0;
+      padding-right: 2em;
+
+      h1 {
+        margin: 0.6em 0;
+      }
+    }
+
+    aside {
+      flex: 1 1 0;
+      text-align: center;
+      overflow: hidden;
+      height: 80vh;
+      text-align: center;
+
+      .aside__wrapper {
+        margin: 0;
+      }
+
+      img {
+        position: relative;
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

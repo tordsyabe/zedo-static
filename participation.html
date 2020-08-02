@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>zgl. - Participation</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="" class="logo">zgl.</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Group</a></li>
+            <li><a href="#">Vision</a></li>
+            <li>
+              <a class="active" href="participation.html">Participation</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <section class="content">
+      <div class="container content__main">
+        <main class="content__left">
+          <h1 class="content__animation">Our Participation</h1>
+          <span class="content__faded content__animation"
+            >Our Participation</span
+          >
+          <p class="content__subtitle content__animation">We are compose</p>
+          <p class="content__animation">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+            aut maiores neque exercitationem repudiandae libero, ab optio facere
+            quo. Fugiat unde maiores nemo similique sed vel laborum quasi earum
+            officiis, quod eligendi nostrum ab deleniti expedita sint enim nulla
+            nobis?
+          </p>
+        </main>
+
+        <aside>
+          <div class="aside__wrapper">
+            <div class="aside__content">
+              <h2>Zedo Project Management Services</h2>
+              <a href="" class="btn-secondary">Read More</a>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1552793494-111afe03d0ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+              alt="zedo project management services."
+            />
+            <div class="overlay"></div>
+          </div>
+          <div class="aside__wrapper">
+            <div class="aside__content">
+              <h2>Mamola Marine Corporation</h2>
+              <a href="" class="btn-secondary">Read More</a>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+              alt="mamola maritime services"
+            />
+            <div class="overlay"></div>
+          </div>
+          <div class="aside__wrapper">
+            <div class="aside__content">
+              <h2>Promar Shipping Services</h2>
+              <a href="" class="btn-secondary">Read More</a>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1560264350-1a8891f44df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+              alt="promar shipping services"
+            />
+            <div class="overlay"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+    <script>
+      gsap.from(".content__animation", {
+        opacity: 0,
+        duration: 0.8,
+        y: -50,
+        stagger: 0.4,
+      });
+
+      gsap.from("aside img", { opacity: 0, duration: 0.8, delay: 1, x: 100 });
+      gsap.from(".overlay", {
+        opacity: 0,
+        duration: 0.8,
+        delay: 2,
+        y: -50,
+      });
+
+      gsap.from(".btn-secondary", {
+        opacity: 0,
+        duration: 1,
+        delay: 1.6,
+        y: 50,
+      });
+
+      gsap.from(".aside__content h2", {
+        opacity: 0,
+        duration: 1,
+        delay: 1.6,
+        y: -50,
+      });
+    </script>
+  </body>
+</html>

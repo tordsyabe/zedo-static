@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700;900&display=swap");
+@import "config";
+@import "utilities";
+@import "buttons";
 
-$primary-color: #0d3d6c;
-$text-color: #14151f;
-
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -17,23 +19,13 @@ body {
 
 h1 {
   font-size: 3em;
-  margin: 0.6em 0;
-}
-
-.container {
-  margin-right: auto; /* 1 */
-  margin-left: auto; /* 1 */
-
-  max-width: 1124px; /* 2 */
-
-  padding-right: 1em; /* 3 */
-  padding-left: 1em; /* 3 */
+  margin: 0.4em 0;
 }
 
 header {
   display: flex;
-  flex-direction: column;
-  padding: 0 1em;
+  justify-content: space-between;
+  margin: 1em 0;
   a {
     text-decoration: none;
   }
@@ -41,31 +33,39 @@ header {
   .logo {
     font-weight: 700;
     color: $primary-color;
-    padding: 1em 0;
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 
   nav {
-    padding: 1.5em 0;
-
+    display: none;
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
       display: flex;
-      justify-content: space-between;
-      padding: 1em 0;
+      position: relative;
+      padding-right: 6em;
 
       li a {
         color: $text-color;
-        font-size: 0.8em;
         text-transform: uppercase;
-        letter-spacing: 1.2px;
+        font-weight: 700;
+        padding: 2em;
+        font-size: 0.8em;
       }
 
       .active {
-        font-weight: 700;
         color: $primary-color;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: 0;
+        width: 90px;
+        height: 2px;
+        background-color: $text-color;
       }
     }
   }
@@ -82,12 +82,54 @@ header {
     line-height: 1.6em;
   }
 
-  .content__left {
+  main {
     position: relative;
+    overflow: hidden;
   }
 
-  .content__left {
+  aside {
     position: relative;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .aside__wrapper {
+      position: relative;
+      height: 100%;
+      margin: 2em 0;
+
+      .overlay {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      .aside__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 10;
+        text-align: center;
+        height: 100%;
+        padding: 2rem;
+        width: 100%;
+
+        h2 {
+          color: #fff;
+        }
+      }
+    }
   }
 
   .content__faded {
@@ -116,87 +158,6 @@ header {
     height: 1px;
     background-color: $text-color;
   }
-
-  img {
-    height: 250px;
-    object-fit: cover;
-  }
-
-  .btn {
-    text-decoration: none;
-    font-size: 0.8em;
-    padding: 1em 2em;
-    border: 1px solid $primary-color;
-    color: $primary-color;
-    margin: 1em 0;
-    display: inline-block;
-
-    &:hover {
-      background-color: $primary-color;
-      color: #fff;
-    }
-  }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  body {
-    font-size: 16px;
-  }
-
-  header {
-    padding: 0 2em;
-
-    .logo {
-      position: absolute;
-      top: 0;
-      left: 1em;
-    }
-
-    align-items: center;
-    width: 100%;
-
-    nav ul {
-      text-align: center;
-
-      li {
-        padding: 0 5em;
-      }
-    }
-  }
-
-  .content__main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .content__left {
-      width: 100%;
-      flex: 1 1 0;
-      margin: 0 1em;
-    }
-
-    .content__right {
-      flex: 1 1 0;
-      text-align: center;
-      margin: 0 1em;
-
-      img {
-        height: 80vh;
-        position: relative;
-      }
-    }
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}
+@import "media-query";

@@ -1,0 +1,32 @@
+%btn {
+  text-decoration: none;
+  font-size: 0.8em;
+  padding: 1em 2em;
+  margin-bottom: 2em;
+  margin-top: 1em;
+  display: inline-block;
+  border-radius: 2em;
+}
+
+.btn-primary {
+  @extend %btn;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+
+.btn-secondary {
+  @extend %btn;
+  color: $secondary-color;
+  border: 1px solid $secondary-color;
+
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+    border: 1px solid $primary-color;
+  }
+}
