@@ -51,6 +51,7 @@
               <a href="" class="btn-secondary btn-small">Read More</a>
             </div>
             <img
+              class="img-1"
               src="https://images.unsplash.com/photo-1552793494-111afe03d0ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
               alt="zedo project management services."
             />
@@ -62,6 +63,7 @@
               <a href="" class="btn-secondary btn-small">Read More</a>
             </div>
             <img
+              class="img-2"
               src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
               alt="mamola maritime services"
             />
@@ -73,6 +75,7 @@
               <a href="" class="btn-secondary btn-small">Read More</a>
             </div>
             <img
+              class="img-3"
               src="https://images.unsplash.com/photo-1560264350-1a8891f44df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
               alt="promar shipping services"
             />
@@ -92,23 +95,41 @@
         stagger: 0.4,
       });
 
-      gsap.from("aside img", { opacity: 0, duration: 0.8, delay: 1, x: 100 });
+      gsap.from("aside .img-1", {
+        opacity: 0,
+        duration: 0.8,
+        delay: 1,
+        x: 100,
+      });
+      gsap.from("aside .img-2", {
+        opacity: 0,
+        duration: 0.8,
+        delay: 1.5,
+        x: 100,
+      });
+
+      gsap.from("aside .img-3", {
+        opacity: 0,
+        duration: 0.8,
+        delay: 2,
+        x: 100,
+      });
       gsap.from(".overlay-1", {
         width: 0,
         duration: 0.8,
-        delay: 2,
+        delay: 2.5,
       });
 
       gsap.from(".overlay-2", {
         height: 0,
         duration: 0.8,
-        delay: 2,
+        delay: 2.8,
       });
 
       gsap.from(".overlay-3", {
         width: 0,
         duration: 0.8,
-        delay: 2,
+        delay: 3,
         y: -50,
       });
 
