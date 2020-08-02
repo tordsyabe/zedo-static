@@ -43,10 +43,21 @@
 
       .aside__wrapper {
         margin: 0;
-      }
+        margin-bottom: 0.6em;
 
-      img {
-        position: relative;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        img {
+          position: relative;
+        }
+
+        .overlay {
+        }
+
+        .aside__content {
+        }
       }
     }
   }

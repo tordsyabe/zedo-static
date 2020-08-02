@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <header>
-        <a href="" class="logo">zgl.</a>
+        <a href="index.html" class="logo">zgl.</a>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -30,7 +30,7 @@
           <span class="content__faded content__animation"
             >Our Participation</span
           >
-          <p class="content__subtitle content__animation">We are compose</p>
+          <p class="content__subtitle content__animation">Who are we?</p>
           <p class="content__animation">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
             aut maiores neque exercitationem repudiandae libero, ab optio facere
@@ -38,41 +38,45 @@
             officiis, quod eligendi nostrum ab deleniti expedita sint enim nulla
             nobis?
           </p>
+
+          <a href="participation.html" class="btn-primary content__animation"
+            >Our Mission & Vision</a
+          >
         </main>
 
         <aside>
-          <div class="aside__wrapper">
+          <div class="aside__wrapper" style="height: 32%;">
             <div class="aside__content">
               <h2>Zedo Project Management Services</h2>
-              <a href="" class="btn-secondary">Read More</a>
+              <a href="" class="btn-secondary btn-small">Read More</a>
             </div>
             <img
               src="https://images.unsplash.com/photo-1552793494-111afe03d0ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
               alt="zedo project management services."
             />
-            <div class="overlay"></div>
+            <div class="overlay overlay-1"></div>
           </div>
-          <div class="aside__wrapper">
+          <div class="aside__wrapper" style="height: 32%;">
             <div class="aside__content">
               <h2>Mamola Marine Corporation</h2>
-              <a href="" class="btn-secondary">Read More</a>
+              <a href="" class="btn-secondary btn-small">Read More</a>
             </div>
             <img
               src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
               alt="mamola maritime services"
             />
-            <div class="overlay"></div>
+            <div class="overlay overlay-2"></div>
           </div>
-          <div class="aside__wrapper">
+          <div class="aside__wrapper" style="height: 32%;">
             <div class="aside__content">
               <h2>Promar Shipping Services</h2>
-              <a href="" class="btn-secondary">Read More</a>
+              <a href="" class="btn-secondary btn-small">Read More</a>
             </div>
             <img
               src="https://images.unsplash.com/photo-1560264350-1a8891f44df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
               alt="promar shipping services"
             />
-            <div class="overlay"></div>
+            <div class="overlay overlay-3"></div>
           </div>
         </aside>
       </div>
@@ -89,8 +93,20 @@
       });
 
       gsap.from("aside img", { opacity: 0, duration: 0.8, delay: 1, x: 100 });
-      gsap.from(".overlay", {
-        opacity: 0,
+      gsap.from(".overlay-1", {
+        width: 0,
+        duration: 0.8,
+        delay: 2,
+      });
+
+      gsap.from(".overlay-2", {
+        height: 0,
+        duration: 0.8,
+        delay: 2,
+      });
+
+      gsap.from(".overlay-3", {
+        width: 0,
         duration: 0.8,
         delay: 2,
         y: -50,
